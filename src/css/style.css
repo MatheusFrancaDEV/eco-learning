@@ -45,7 +45,7 @@
     text-decoration: none;
     color: var(---black);
     padding: .5rem;
-    transition: .3s;
+    transition: .1s;
 }
 #menu a:hover{
     color: var(---green);
