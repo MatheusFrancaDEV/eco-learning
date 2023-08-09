@@ -138,12 +138,31 @@
 .content{
     padding: 2rem;
 }
-.content div{
+.introduction-top, .introduction-products{
     display: flex;
     flex-direction: column;
     text-align: justify;
     gap: .5rem;
     margin-block-end: 2rem;
+}
+.game{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: .5rem;
+    margin-block-end: 2rem;
+}
+.game img{
+    margin-top: 1rem;
+    width: 350px;
+    border-radius: 10px;
+}
+.introduction.game{
+    display: block;
+    padding: 1rem;
+}
+.introduction.game h3{
+    margin-block-end: .5rem;
 }
 @media(max-width: 600px){
     .navigation-auto, .manual-navigation{
