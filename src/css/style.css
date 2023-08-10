@@ -3,7 +3,10 @@
 :root{
     ---font-principal: 'Inter', sans-serif;
     ---black: #0f0f0f;
-    ---green: #33DB57;
+    ---green-1: #33DB57;
+    ---green-2: #22be44;
+    ---gray-1: #fff;
+    ---gray-2: #f0eeee;
 }
 
 *{
@@ -23,7 +26,7 @@
     transition: .3s;
 }
 #logo:hover{
-    color: var(---green);
+    color: var(---green-1);
 }
 #logo img{
     width: 100%;
@@ -48,7 +51,7 @@
     transition: .1s;
 }
 #menu a:hover{
-    color: var(---green);
+    color: var(---green-1);
     border-bottom: 1px solid;
 }
 .slider{
@@ -74,24 +77,6 @@
     position: relative;
     transition: .2s;
 }
-.manual-navigation{
-    position: absolute;
-    top: 43%;
-    left: 48%;
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-}
-.manual-btn{
-    border: 2px solid #fff;
-    padding: 5px;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: .1s;
-}
-.manual-btn:hover{
-    background-color: #fff
-}
 #radio:checked ~ .first{
     margin-left: -10%;
 }
@@ -104,70 +89,59 @@
 #radio4:checked ~ .first{
     margin-left: -75%;
 }
-
-.navigation-auto div{
-    border: 2px solid #20a6ff;
-    padding: 5px;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: .1s;
-}
-.navigation-auto{
-    position: absolute;
-    top: 43%;
-    left: 48%;
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-}
-#radio1:checked ~ .navigation-auto .auto-btn1{
-    background-color: #fff;
-}
-#radio2:checked ~ .navigation-auto .auto-btn2{
-    background-color: #fff;
-}
-#radio3:checked ~ .navigation-auto .auto-btn3{
-    background-color: #fff;
-}
-#radio4:checked ~ .navigation-auto .auto-btn4{
-    background-color: #fff;
-}
 #btn-mobile{
     display: none;
 }
 .content{
-    padding: 2rem;
+    padding: 1.5rem;
 }
 .introduction-top, .introduction-products{
     display: flex;
     flex-direction: column;
-    text-align: justify;
     gap: .5rem;
     margin-block-end: 2rem;
+}
+.about-games h1{
+    text-align: center;
 }
 .game{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     gap: .5rem;
-    margin-block-end: 2rem;
+    margin-top: .9rem;
 }
 .game img{
-    margin-top: 1rem;
-    width: 350px;
+    width: 100%;
+    max-width: 350px;
     border-radius: 10px;
+    margin-bottom: .9rem;
 }
 .introduction.game{
     display: block;
-    padding: 1rem;
+    max-width: 600px;
 }
 .introduction.game h3{
     margin-block-end: .5rem;
 }
-@media(max-width: 600px){
-    .navigation-auto, .manual-navigation{
-        display: none;
-    }
+#hover-game{
+    width: 150px;
+    border: none;
+    margin-top: 1rem;
+    padding: .7rem 0;
+    background-color: var(---green-1);
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: .2s;
+    color: var(---black);
+}
+#hover-game:hover,
+#hover-game:active{
+    background-color: var(---green-2);
+    cursor: pointer;
+} 
+@media(max-width: 660px){
     #menu{
         display: none;
     }
@@ -180,7 +154,7 @@
         width: 100%;
         top: 64px;
         right: 0;
-        background: #fff;
+        background: var(---gray-1);
         height: 0px;
         z-index: 1000;
         transition: .6s;
@@ -196,8 +170,8 @@
         display: flex;
         margin-top: 1rem;
         margin-block-end: .8rem;
-        font-size: 1.4rem;
-        border-bottom: 2px solid #26993f;
+        font-size: 1.2rem;
+        border-bottom: 2px solid var(---gray-2);
     }
     #btn-mobile{
         display: flex;
@@ -209,7 +183,7 @@
         gap: .5rem;
     }
     #hamburguer{
-        border-top: 2px solid #33DB57;
+        border-top: 2px solid var(---black);
         width: 20px;
     }
     #hamburguer::after, #hamburguer::before{
@@ -217,7 +191,7 @@
         display: block;
         width: 20px;
         height: 2px;
-        background: #33DB57;
+        background: var(---black);
         margin-top: 5px;
         transition: .3s;
         position: relative;
@@ -233,6 +207,11 @@
         top: -7px;
     }
     .game{
-        display: block;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .slider{
+        height: 300px;
     }
 }
