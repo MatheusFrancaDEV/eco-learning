@@ -5,6 +5,7 @@
     ---black: #0f0f0f;
     ---green-1: #33DB57;
     ---green-2: #22be44;
+    ---green-3: #00804A;
     ---gray-1: #fff;
     ---gray-2: #f0eeee;
 }
@@ -94,12 +95,26 @@
 }
 .content{
     padding: 1.5rem;
+    background-color: var(---gray-2);
 }
 .introduction-top, .introduction-products{
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
     gap: .5rem;
+    padding: 2rem;
     margin-block-end: 2rem;
+    background-color: var(---gray-1);
+    max-width: 800px;
+    border-radius: 8px;
+}
+.introduction-top p, .introduction-products p{
+    max-width: 800px;
+}
+.introduction-top span, .introduction-products span{
+    color: var(---green-3);
 }
 .about-games h1{
     text-align: center;
@@ -108,40 +123,51 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 0 auto;
     gap: .5rem;
     margin-top: .9rem;
+    padding: .4rem;
+    max-width: 800px;
+    background-color: var(---gray-1);
+    border-radius: 8px;
 }
 .game img{
     width: 100%;
     max-width: 350px;
     border-radius: 10px;
-    margin-bottom: .9rem;
 }
 .introduction.game{
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: left;
+    margin-left: .3rem;
     max-width: 600px;
 }
-.introduction.game h3{
-    margin-block-end: .5rem;
-}
 #hover-game{
-    width: 150px;
     border: none;
-    margin-top: 1rem;
-    padding: .7rem 0;
-    background-color: var(---green-1);
+    padding: 13px 58px;
+    background-color: var(---green-3);
     border-radius: 50px;
-    font-size: 1rem;
+    font-size: 1.1rem;
     font-weight: 500;
     transition: .2s;
-    color: var(---black);
+    color: var(---gray-1);
 }
 #hover-game:hover,
 #hover-game:active{
     background-color: var(---green-2);
     cursor: pointer;
 } 
-@media(max-width: 660px){
+.rodape{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    font-size: 1.2rem;
+    background-color: var(---gray-1);
+}
+@media(max-width: 690px){
     #menu{
         display: none;
     }
@@ -211,7 +237,7 @@
         justify-content: center;
         flex-direction: column;
     }
-    .slider{
-        height: 300px;
+    .slider img{
+        height: 403px;
     }
 }
