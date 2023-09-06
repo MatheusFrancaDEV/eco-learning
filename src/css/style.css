@@ -144,8 +144,11 @@
     margin-left: .3rem;
     max-width: 600px;
 }
-#hover-game{
-    border: none;
+#game{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 140px;
     padding: 13px 58px;
     background-color: var(---green-3);
     border-radius: 50px;
@@ -153,9 +156,11 @@
     font-weight: 500;
     transition: .2s;
     color: var(---gray-1);
+    text-decoration: none;
+    margin-top: .8rem;
 }
-#hover-game:hover,
-#hover-game:active{
+#game:hover,
+#game:active{
     background-color: var(---green-2);
     cursor: pointer;
 } 
@@ -238,6 +243,6 @@
         flex-direction: column;
     }
     .slider img{
-        height: 403px;
+        height: 400px;
     }
 }
