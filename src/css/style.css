@@ -15,45 +15,34 @@
     padding: 0;
     font-family: var(---font-principal);
     box-sizing: border-box;
-    color: var(---black);
-    -webkit-font-smoothing: antialiased;
+    scroll-behavior: smooth;
 }
-#logo{
+.header{
     display: flex;
     align-items: center;
-    font-size: 1.6rem;
-    font-weight: 600;
-    text-decoration: none;
-    transition: .3s;
-}
-#logo:hover{
-    color: var(---green-1);
-}
-#logo img{
-    width: 100%;
-    max-width: 85px;
-    padding: 0;
-}
-#header{
-    display: flex;
     justify-content: space-between;
-    align-items: center;
     padding: 1rem;
 }
-#menu{
+.logo{
+    text-decoration: none;
+    color: var(---black);
+}
+.menu{
     display: flex;
     align-items: center;
     gap: .9rem;
     list-style: none;
 }
-#menu a{
+.menu a{
     text-decoration: none;
+    color: var(---black);
     padding: .5rem;
+    font-size: 1.2rem;
+    font-weight: bold;
     transition: .1s;
 }
-#menu a:hover{
+.menu a:hover{
     color: var(---green-1);
-    border-bottom: 1px solid;
 }
 .slider{
     margin: 0 auto;
@@ -69,9 +58,10 @@
 .slides input{
     display: none;
 }
-.slides-images img{
+.image-slide{
     width: 100%;
     overflow: hidden;
+    object-fit: cover;
 }
 .slides-images{
     width: 25%;
@@ -90,78 +80,71 @@
 #radio4:checked ~ .first{
     margin-left: -75%;
 }
-#btn-mobile{
+.btn-mobile{
     display: none;
 }
 .content{
-    padding: 1.5rem;
-    background-color: var(---gray-2);
-}
-.introduction-top, .introduction-products{
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
+    padding: 1.5rem;
+}
+.introduction-top, 
+.products{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
     gap: .5rem;
-    padding: 2rem;
-    margin-block-end: 2rem;
-    background-color: var(---gray-1);
-    max-width: 800px;
-    border-radius: 8px;
+    padding: 1.5rem;
+    max-width: 1250px;
 }
-.introduction-top p, .introduction-products p{
-    max-width: 800px;
-}
-.introduction-top span, .introduction-products span{
+.green-word{
     color: var(---green-3);
 }
-.about-games h1{
+.title-about-game{
     text-align: center;
+}
+.about-games{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
 }
 .game{
     display: flex;
     align-items: center;
-    justify-content: center;
-    margin: 0 auto;
-    gap: .5rem;
-    margin-top: .9rem;
-    padding: .4rem;
-    max-width: 800px;
-    background-color: var(---gray-1);
-    border-radius: 8px;
+    gap: .8rem;    
 }
-.game img{
-    width: 100%;
-    max-width: 350px;
-    border-radius: 10px;
-}
-.introduction.game{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: left;
-    margin-left: .3rem;
+.descri-game{
     max-width: 600px;
 }
-#game{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 140px;
-    padding: 13px 58px;
-    background-color: var(---green-3);
-    border-radius: 50px;
-    font-size: 1.1rem;
-    font-weight: 500;
-    transition: .2s;
-    color: var(---gray-1);
-    text-decoration: none;
-    margin-top: .8rem;
+.image-game{
+    width: 100%;
+    max-width: 350px;
+    height: 200px;
+    border-radius: 10px;
+    object-fit: cover;
 }
-#game:hover,
-#game:active{
+.introduction-game{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.btn-game{
     background-color: var(---green-2);
+    width: 100%;
+    max-width: 200px;
+    padding: .7rem;
+    border-radius: 4px;
+    text-decoration: none;
+    text-align: center;
+    color: var(---black);
+    font-size: 1.1rem;
+    transition: .2s;
+}
+.btn-game:hover{
+    background-color: var(---green-3);
+    color: var(---gray-1);
     cursor: pointer;
 } 
 .rodape{
@@ -173,13 +156,13 @@
     background-color: var(---gray-1);
 }
 @media(max-width: 690px){
-    #menu{
+    .menu{
         display: none;
     }
-    #btn-mobile{
+    .btn-mobile{
         display: block;
     }
-    #menu{
+    .menu{
         display: block;
         position: absolute;
         width: 100%;
@@ -192,19 +175,19 @@
         visibility: hidden;
         overflow-y: hidden;
     }
-    #nav.active #menu{
+    .nav-bar.active .menu{
         height: calc(100vh - 64px);
         visibility: visible;
         overflow-y: auto;
     }
-    #menu a{
+    .menu a{
         display: flex;
         margin-top: 1rem;
         margin-block-end: .8rem;
         font-size: 1.2rem;
         border-bottom: 2px solid var(---gray-2);
     }
-    #btn-mobile{
+    .btn-mobile{
         display: flex;
         padding: .5rem 1rem;
         font-size: 1rem;
@@ -213,11 +196,12 @@
         cursor: pointer;
         gap: .5rem;
     }
-    #hamburguer{
+    .hamburguer{
         border-top: 2px solid var(---black);
         width: 20px;
     }
-    #hamburguer::after, #hamburguer::before{
+    .hamburguer::after, 
+    .hamburguer::before{
         content: '';
         display: block;
         width: 20px;
@@ -227,22 +211,31 @@
         transition: .3s;
         position: relative;
     }
-    #nav.active #hamburguer{
+    .nav-bar.active .hamburguer{
         border-top-color: transparent;
     }
-    #nav.active #hamburguer::before{
+    .nav-bar.active .hamburguer::before{
         transform: rotate(135deg);
     }
-    #nav.active #hamburguer:after{
+    .nav-bar.active .hamburguer:after{
         transform: rotate(-135deg);
         top: -7px;
     }
     .game{
         display: flex;
         justify-content: center;
+        align-items: center;
         flex-direction: column;
+        max-width: 300px;
     }
-    .slider img{
+    .introduction-game{
+        align-items: center;
+    }
+    .btn-game{
+        width: 100%;
+        max-width: 600px;
+    }
+    .image-slide{
         height: 401px;
     }
 }
