@@ -1,0 +1,205 @@
+:root{
+    ---font-principal: 'Inter', sans-serif;
+    ---black: #0f0f0f;
+    ---green-1: #33DB57;
+    ---green-2: #22be44;
+    ---green-3: #00804A;
+    ---gray-1: #fff;
+    ---gray-2: #f0eeee;
+}
+
+.header{
+    position: sticky;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    transition: .2s;
+    z-index: 1;
+}
+.header.fixed{
+    background-color: var(---gray-2);
+    padding: .7rem;
+    transition: .2s;
+}
+.logo{
+    text-decoration: none;
+    color: var(---black);
+}
+.menu{
+    display: flex;
+    align-items: center;
+    gap: .9rem;
+    list-style: none;
+}
+.menu a{
+    text-decoration: none;
+    color: var(---black);
+    padding: .5rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: .1s;
+}
+.menu a:hover{
+    color: var(---green-1);
+}
+.btn-mobile{
+    display: none;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+}
+.introduction-top, 
+.products{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    gap: .5rem;
+    padding: 1.5rem;
+    max-width: 1250px;
+}
+.green-word{
+    color: var(---green-3);
+}
+.title-about-game{
+    text-align: center;
+}
+.about-games{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .8rem;
+}
+.game{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 700px;
+    width: 100%;
+    gap: .8rem;    
+}
+.descri-game{
+    max-width: 600px;
+}
+.image-game{
+    width: 100%;
+    max-width: 350px;
+    height: 200px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+.introduction-game{
+    display: flex;
+    flex-direction: column;
+    gap: .8rem;
+}
+.btn-game{
+    background-color: var(---green-2);
+    width: 100%;
+    max-width: 200px;
+    padding: .7rem;
+    border-radius: 4px;
+    text-decoration: none;
+    text-align: center;
+    color: var(---black);
+    font-size: 1.1rem;
+    transition: .2s;
+}
+.btn-game:hover{
+    background-color: var(---green-3);
+    color: var(---gray-1);
+    cursor: pointer;
+} 
+.rodape{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    font-size: 1.2rem;
+    background-color: var(---gray-1);
+}
+@media(max-width: 690px){
+    .menu{
+        display: none;
+    }
+    .btn-mobile{
+        display: block;
+    }
+    .menu{
+        display: block;
+        position: absolute;
+        width: 100%;
+        top: 64px;
+        right: 0;
+        background: var(---gray-1);
+        height: 0px;
+        z-index: 1000;
+        transition: .6s;
+        visibility: hidden;
+        overflow-y: hidden;
+    }
+    .nav-bar.active .menu{
+        height: calc(100vh - 64px);
+        visibility: visible;
+        overflow-y: auto;
+    }
+    .menu a{
+        display: flex;
+        margin-top: 1rem;
+        margin-block-end: .8rem;
+        font-size: 1.2rem;
+        border-bottom: 2px solid var(---gray-2);
+    }
+    .btn-mobile{
+        display: flex;
+        padding: .5rem 1rem;
+        font-size: 1rem;
+        border: none;
+        background: none;
+        cursor: pointer;
+        gap: .5rem;
+    }
+    .hamburguer{
+        border-top: 2px solid var(---black);
+        width: 20px;
+    }
+    .hamburguer::after, 
+    .hamburguer::before{
+        content: '';
+        display: block;
+        width: 20px;
+        height: 2px;
+        background: var(---black);
+        margin-top: 5px;
+        transition: .3s;
+        position: relative;
+    }
+    .nav-bar.active .hamburguer{
+        border-top-color: transparent;
+    }
+    .nav-bar.active .hamburguer::before{
+        transform: rotate(135deg);
+    }
+    .nav-bar.active .hamburguer:after{
+        transform: rotate(-135deg);
+        top: -7px;
+    }
+    .game{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        max-width: 300px;
+    }
+    .introduction-game{
+        align-items: center;
+    }
+    .btn-game{
+        width: 100%;
+        max-width: 600px;
+    }
+}
