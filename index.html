@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./src/css/style.css">
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/global.css">
     <title>Eco Learning</title>
     <meta name="description" content="Conheça a Eco Learning, uma empresa focada em educação para o desenvolvimento sustentável para todas as idades">
 </head>
@@ -20,77 +21,41 @@
             </ul>
         </nav>
     </header>
-    <div class="slider">
-        <div class="slides">
-            <input type="radio" name="radio-btn" id="radio1">
-            <input type="radio" name="radio-btn" id="radio2">
-            <input type="radio" name="radio-btn" id="radio3">
-            <input type="radio" name="radio-btn" id="radio4">
-
-            <div class="slides-images first">
-                <img src="./src/img/slides-images/guillaume-de-germain-6Xw9wMJyHus-unsplash.jpg" alt="Image slider" class="image-slide">
+    <div class="container">
+        <div class="content">
+            <div class="introduction-top" id="sobre">
+                <h2>Oque é a <span lang="en-US" class="green-word">Eco Learning</span></h2>
+                <p><span lang="en-US">Eco Learning</span> é uma empresa que combina ecologia e tecnologia para oferecer soluções sustentáveis e inovadoras. A empresa oferece uma ampla gama de produtos e serviços, incluindo aprendizado ecológico para estudantes e professores, com atividades temáticas simples, divertidas e impactantes.</p>
+                <p>A <span lang="en-US">Eco Learning</span> tem como objetivo informar, inspirar e mobilizar as pessoas para inovar, co-criar e trabalhar para curar e sustentar o planeta. Mesmo diante da incerteza, todos podemos nos conectar para tomar ações ousadas para mudar.</p>
             </div>
-            <div class="slides-images">
-                <img src="./src/img/slides-images/guillaume-de-germain-6Xw9wMJyHus-unsplash.jpg" alt="Image slider" class="image-slide">
+            <div class="products" id="servicos">
+                <h2>Quais os produtos e serviços a <span class="green-word" lang="en-US">Eco Learning</span> trabalha?</h2>
+                <p>A <span lang="en-US">Eco Learning</span> é uma empresa que trabalha com <strong>jogos interativos e videos educativos</strong> em prol da sustentabilidade</p>
             </div>
-            <div class="slides-images">
-                <img src="./src/img/slides-images/jan-kopriva-nex3P5iBnPg-unsplash.jpg" alt="Image slider" class="image-slide">
+            <div class="about-games">
+                <h2 class="title-about-game">Jogos</h2>
+                <div class="game">
+                    <img src="./public/assets/lixo-ao-alvo.png" alt="Image Game Lixo ao Alvo" class="image-game">
+                    <div class="introduction-game">
+                        <h3>Lixo ao Alvo</h3>
+                        <p class="descri-game">Lixo ao Alvo é um jogo divertido e educativo que tem como objetivo conscientizar as pessoas sobre a importância da ecologia.</p>
+                        <a href="https://tech-espm.github.io/inter-1sem-2018-lixo-ao-alvo/" class="btn-game" role="button">Jogar</a>
+                    </div>
+                </div>
+                <div class="game">
+                    <img src="./public/assets/quiz-ecology.jpg" alt="Quiz sobre ecologia" class="image-game">
+                    <div class="introduction-game">
+                        <h3>Eco Quiz</h3>
+                        <p class="descri-game">Teste seus conhecimentos sobre ecologia nesse quiz desenvolvido com perguntas relacionadas a ecologia entre outras coisas!</p>
+                        <a href="https://matheusmg02.github.io/eco-quiz/" class="btn-game" role="button">Quiz!</a>
+                    </div>
+                </div>
             </div>
-            <div class="slides-images">
-                <img src="./src/img/slides-images/guillaume-de-germain-6Xw9wMJyHus-unsplash.jpg" class="image-slide" alt="Image Slider">
-            </div>
-            <div class="navigation-auto">
-                <div class="auto-btn1"></div>
-                <div class="auto-btn2"></div>
-                <div class="auto-btn3"></div>
-                <div class="auto-btn4"></div>
-            </div>
+            <footer class="rodape">
+                <span lang="en-US">Eco Learning &copy;2023</span>
+            </footer>
         </div>
     </div>
-        <div class="manual-navigation">
-            <label for="radio" class="manual-btn"></label>
-            <label for="radio2" class="manual-btn"></label>
-            <label for="radio3" class="manual-btn"></label>
-            <label for="radio4" class="manual-btn"></label>
-        </div>
-        <div class="container">
-            <div class="content">
-                <div class="introduction-top" id="sobre">
-                    <h2>Oque é a <span class="green-word" lang="en-US">Eco Learning</span></h2>
-                    <p><span lang="en-US">Eco Learning</span> é uma empresa que combina ecologia e tecnologia para oferecer soluções sustentáveis e inovadoras. A empresa oferece uma ampla gama de produtos e serviços, incluindo aprendizado ecológico para estudantes e professores, com atividades temáticas simples, divertidas e impactantes.</p>
-                    <p> A Eco Learning tem como objetivo informar, inspirar e mobilizar as pessoas para inovar, co-criar e trabalhar para curar e sustentar o planeta. Mesmo diante da incerteza, todos podemos nos conectar para tomar ações ousadas para mudar.</p>
-                </div>
-                <div class="products" id="servicos">
-                    <h2>Quais produtos e serviços a <span class="green-word" lang="en-US">Eco Learning</span> trabalha?</h2>
-                    <p>A Eco Learning é uma empresa que trabalha com <strong>jogos interativos e videos educativos</strong> em prol da sustentabilidade.</p>
-                </div>
-                <div class="about-games">
-                    <h2 class="title-about-game">Jogos</h2>
-                    <div class="game">
-                        <img src="./src/img/lixo-ao-alvo.png" alt="Image Game 1" class="image-game">
-                        <div class="introduction-game">
-                            <h3>Lixo ao Alvo</h3>
-                            <p class="descri-game">Lixo ao Alvo é um jogo divertido e educativo que tem como objetivo conscientizar as pessoas sobre a importância da ecologia.</p>
-                            <a class="btn-game" href="https://tech-espm.github.io/inter-1sem-2018-lixo-ao-alvo/" role="button">Jogar</a>
-                        </div>
-                    </div>
-                    <div class="game">
-                        <img src="https://images.unsplash.com/photo-1451847251646-8a6c0dd1510c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1032&q=80" alt="Image Game 2" class="image-game">
-                        <div class="introduction-game">
-                            <h3>Eco Quiz</h3>
-                            <p class="descri-game">Teste seus conhecimentos sobre ecologia nesse quiz desenvolvido com perguntas relacionadas a ecologia entre outras coisas!</p>
-                            <a class="btn-game" href="https://matheusmg02.github.io/eco-quiz/" role="button">Quiz!</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    <footer>
-        <div class="rodape">
-            <span>Eco Learning &copy;2023</span>
-        </footer>
-        <script src="./src/js/script.js"></script>
-        <script src="./src/js/script-slide.js"></script>
-        <script src="./src/js/script-hamburger.js"></script>
-    </body>
-    </html>
+    <script src="./js/script.js"></script>
+</body>
+</html>
